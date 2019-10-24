@@ -25,8 +25,9 @@ class TitleFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater,
                 R.layout.fragment_title,container,false)
-        binding.playButton.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_titleFragment3_to_gameFragment34)
+        binding.playButton.setOnClickListener { view: View ->
+            view.findNavController()
+                    .navigate(TitleFragmentDirections.actionTitleFragment3ToGameFragment34())
         }
         setHasOptionsMenu(true)
         return binding.root
